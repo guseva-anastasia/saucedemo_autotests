@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.SaucedemoTests" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-01-05T20:30:07" hostname="TEM" time="27.935">
+  <properties/>
+  <testcase name="[1] Sauce Labs Backpack" classname="tests.SaucedemoTests" time="7.143"/>
+  <testcase name="[2] Sauce Labs Bike Light" classname="tests.SaucedemoTests" time="1.82"/>
+  <testcase name="[3] Sauce Labs Bolt T-Shirt" classname="tests.SaucedemoTests" time="1.853"/>
+  <testcase name="[4] Sauce Labs Fleece Jacket" classname="tests.SaucedemoTests" time="1.645"/>
+  <testcase name="[5] Sauce Labs Onesie" classname="tests.SaucedemoTests" time="1.673"/>
+  <testcase name="[6] Test.allTheThings() T-Shirt (Red)" classname="tests.SaucedemoTests" time="1.712"/>
+  <testcase name="[1] Sauce Labs Backpack" classname="tests.SaucedemoTests" time="1.506"/>
+  <testcase name="[2] Sauce Labs Bike Light" classname="tests.SaucedemoTests" time="1.525"/>
+  <testcase name="[3] Sauce Labs Bolt T-Shirt" classname="tests.SaucedemoTests" time="1.471"/>
+  <testcase name="[4] Sauce Labs Fleece Jacket" classname="tests.SaucedemoTests" time="1.507"/>
+  <testcase name="[5] Sauce Labs Onesie" classname="tests.SaucedemoTests" time="1.482"/>
+  <testcase name="[6] Test.allTheThings() T-Shirt (Red)" classname="tests.SaucedemoTests" time="1.488"/>
+  <testcase name="[1] STANDARD_USER" classname="tests.SaucedemoTests" time="1.519"/>
+  <testcase name="[2] LOCKED_USER" classname="tests.SaucedemoTests" time="1.57"/>
+  <system-out><![CDATA[Нет такого товара в магазине
+Нет такого товара в магазине
+Нет такого товара в магазине
+Нет такого товара в магазине
+Нет такого товара в магазине
+Нет такого товара в магазине
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>
