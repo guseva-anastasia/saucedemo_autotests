@@ -2,6 +2,7 @@ package tests;
 
 import models.UserType;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -26,6 +27,7 @@ public class SaucedemoTests extends TestBase{
 
 
     @EnumSource(UserType.class)
+    @Tag("SMOKE")
     @DisplayName("Авторизация выбранным польльзователем")
     @ParameterizedTest()
     void authorizationAnyUserTest(UserType userType) {
@@ -57,6 +59,8 @@ public class SaucedemoTests extends TestBase{
 
     }
 
+
+    @Tag("SMOKE")
     @ValueSource(strings = {sauceLabsBackpack,sauceLabsBikeLight,sauceLabsBoltTShirt,sauceLabsFleeceJacket,sauceLabsOnesie,sauceLabsRedTShirt})
     @DisplayName("Добавить товар в корзину")
     @ParameterizedTest()
