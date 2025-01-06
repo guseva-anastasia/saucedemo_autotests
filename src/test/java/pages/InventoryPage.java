@@ -1,12 +1,14 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import tests.TestBase;
 
+import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class InventoryPage {
+public class InventoryPage extends TestBase {
 
     public static String
     sauceLabsBackpack = "Sauce Labs Backpack",
@@ -22,6 +24,8 @@ public class InventoryPage {
     sauceLabsRedTShirt = "Test.allTheThings() T-Shirt (Red)",
     sauceLabsRedTShirtDescription = "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.",
     inventoryItemDescription = ".inventory_item_description";
+
+    public SelenideElement productSortContainer = $(".product_sort_container");
 
     public InventoryPage checkTheProductDescription (String productName) {
         String textDescription;
@@ -56,5 +60,7 @@ public class InventoryPage {
         $(byText(productName)).ancestor(inventoryItemDescription).$("button").shouldHave(text("Remove"));
         return this;
     }
+
+
 
 }

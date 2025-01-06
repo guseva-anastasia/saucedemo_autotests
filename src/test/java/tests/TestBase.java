@@ -10,7 +10,7 @@ public class TestBase {
     @BeforeAll
     static void configurationBrowser() {
         Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://www.saucedemo.com";
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
     }
 

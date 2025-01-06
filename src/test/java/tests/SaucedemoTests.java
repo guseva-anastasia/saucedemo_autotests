@@ -4,26 +4,25 @@ import models.UserType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.*;
 import pages.InventoryPage;
 import pages.RegistrationPage;
 
 import static models.UserType.*;
 
-public class SaucedemoTests extends TestBase{
+public class SaucedemoTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
     InventoryPage inventoryPage = new InventoryPage();
 
-    private static final String
-    sauceLabsBackpack = "Sauce Labs Backpack",
-    sauceLabsBikeLight = "Sauce Labs Bike Light",
-    sauceLabsBoltTShirt = "Sauce Labs Bolt T-Shirt",
-    sauceLabsFleeceJacket = "Sauce Labs Fleece Jacket",
-    sauceLabsOnesie = "Sauce Labs Onesie",
-    sauceLabsRedTShirt = "Test.allTheThings() T-Shirt (Red)";
 
+    private static final String
+            sauceLabsBackpack = "Sauce Labs Backpack",
+            sauceLabsBikeLight = "Sauce Labs Bike Light",
+            sauceLabsBoltTShirt = "Sauce Labs Bolt T-Shirt",
+            sauceLabsFleeceJacket = "Sauce Labs Fleece Jacket",
+            sauceLabsOnesie = "Sauce Labs Onesie",
+            sauceLabsRedTShirt = "Test.allTheThings() T-Shirt (Red)";
 
 
     @EnumSource(UserType.class)
@@ -45,7 +44,7 @@ public class SaucedemoTests extends TestBase{
         }
     }
 
-    @ValueSource(strings = {sauceLabsBackpack,sauceLabsBikeLight,sauceLabsBoltTShirt,sauceLabsFleeceJacket,sauceLabsOnesie,sauceLabsRedTShirt})
+    @ValueSource(strings = {sauceLabsBackpack, sauceLabsBikeLight, sauceLabsBoltTShirt, sauceLabsFleeceJacket, sauceLabsOnesie, sauceLabsRedTShirt})
     @DisplayName("Проверить описание у товара")
     @ParameterizedTest()
     void checkTheProductDescriptionTest(String productName) {
@@ -61,7 +60,7 @@ public class SaucedemoTests extends TestBase{
 
 
     @Tag("SMOKE")
-    @ValueSource(strings = {sauceLabsBackpack,sauceLabsBikeLight,sauceLabsBoltTShirt,sauceLabsFleeceJacket,sauceLabsOnesie,sauceLabsRedTShirt})
+    @ValueSource(strings = {sauceLabsBackpack, sauceLabsBikeLight, sauceLabsBoltTShirt, sauceLabsFleeceJacket, sauceLabsOnesie, sauceLabsRedTShirt})
     @DisplayName("Добавить товар в корзину")
     @ParameterizedTest()
     void addProductToCardTest(String productName) {
@@ -74,5 +73,7 @@ public class SaucedemoTests extends TestBase{
                 .addProductToCart(productName)
                 .checkChangeButtonToRemove(productName);
     }
+
+
 
 }
